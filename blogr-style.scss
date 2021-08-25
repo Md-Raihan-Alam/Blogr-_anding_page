@@ -1,0 +1,96 @@
+$primary-header-color: hsl(13, 100%, 72%);
+$primary-white: hsl(100, 100%, 100%);
+$fontSize: (
+  "verySmall": 10px,
+  "small": 15px,
+  "normal": 17px,
+  "big": 20px,
+  "logoSize": 24px,
+);
+$fontWeight: (
+  "light": 400,
+  "bold": 700,
+);
+@function fontSize($font-name) {
+  @return map-get($fontSize, $font-name);
+}
+@function fontWeight($weight-name) {
+  @return map-get($fontWeight, $weight-name);
+}
+@mixin widthHeight($data1, $data2) {
+  width: $data1;
+  height: $data2;
+}
+@mixin displayFlex($flexDirection, $alignments, $alignments2) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $alignments;
+  align-items: $alignments2;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+header {
+  background-color: $primary-header-color;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 100px;
+}
+header img {
+  position: absolute;
+  bottom: -1365px;
+  right: -1224px;
+  transform: scale(1);
+}
+.header_menu_section {
+  @include widthHeight(80%, 100px);
+  z-index: 222222;
+  position: absolute;
+  @include displayFlex(row, space-between, center);
+  padding: 0px 20px;
+  .menu_one {
+    @include displayFlex(row, space-between, center);
+    .logo_name {
+      font-size: fontSize(logoSize);
+      padding-right: 20px;
+      color: $primary-white;
+    }
+    .menu_section {
+      &_link {
+        padding-right: 40px;
+        color: $primary-white;
+        position: relative;
+        i {
+          position: absolute;
+          left: 64%;
+          top: 6px;
+          font-size: fontSize(verySmall);
+        }
+      }
+    }
+  }
+  .menu_two {
+    &_login {
+      color: $primary-white;
+    }
+    &_sign {
+      margin-left: 10px;
+      width: 100px;
+      height: 30px;
+      border: none;
+      outline: none;
+      background-color: $primary-white;
+      color: hsl(353, 100%, 62%);
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: fontWeight(bold);
+    }
+  }
+}
