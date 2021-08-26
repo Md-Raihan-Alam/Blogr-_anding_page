@@ -13,7 +13,7 @@ header {
   height: 500px;
   overflow: hidden;
   position: relative;
-  border-bottom-left-radius: 100px;
+  border-bottom-left-radius: 50px;
 }
 
 .header_section {
@@ -208,7 +208,7 @@ header {
 .design_section .design_divide_one {
   width: 50%;
   height: auto;
-  padding: 0px 40px;
+  padding-left: 40px;
 }
 
 .design_section .design_divide_one .text_one_header {
@@ -218,6 +218,8 @@ header {
 }
 
 .design_section .design_divide_one .text_one_desc {
+  width: 80%;
+  height: auto;
   text-align: justify;
   color: gray;
   margin-bottom: 30px;
@@ -230,6 +232,8 @@ header {
 }
 
 .design_section .design_divide_one .text_two_desc {
+  width: 80%;
+  height: auto;
   text-align: justify;
   color: gray;
   margin-bottom: 30px;
@@ -249,4 +253,64 @@ header {
 }
 
 /*design section*/
+/*mobile_section*/
+.mobile_section {
+  margin-top: 400px;
+  width: 100%;
+  height: 400px;
+  background-color: #2c2d3f;
+  border-radius: 0px 50px 0px 50px;
+  position: relative;
+}
+
+.mobile_section .background_section {
+  position: relative;
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+}
+
+.mobile_section .background_section .img_one {
+  position: absolute;
+  top: -610px;
+  left: -235px;
+}
+
+.mobile_section .background_section .background_text {
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 100px;
+  float: right;
+}
+
+.mobile_section .background_section .background_text .header {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.mobile_section .background_section .background_text .desc {
+  color: gray;
+}
+
+.mobile_section .img_two {
+  position: absolute;
+  top: -80px;
+}
+
+/*mobile_section*/
 /*# sourceMappingURL=blogr-style.css.map */

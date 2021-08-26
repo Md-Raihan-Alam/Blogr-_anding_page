@@ -42,7 +42,7 @@ header {
   height: 500px;
   overflow: hidden;
   position: relative;
-  border-bottom-left-radius: 100px;
+  border-bottom-left-radius: 50px;
 }
 .header_section {
   @include displayFlex(row, center, flex-start);
@@ -155,13 +155,14 @@ header {
     @include displayFlex(row, space-evenly, center);
     &_one {
       @include widthHeight(50%, auto);
-      padding: 0px 40px;
+      padding-left: 40px;
       .text_one {
         &_header {
           @include widthHeight(100%, 60px);
           font-size: fontSize(logoSize);
         }
         &_desc {
+          @include widthHeight(80%, auto);
           text-align: justify;
           color: $primary-gray;
           margin-bottom: 30px;
@@ -173,6 +174,7 @@ header {
           font-size: fontSize(logoSize);
         }
         &_desc {
+          @include widthHeight(80%, auto);
           text-align: justify;
           color: $primary-gray;
           margin-bottom: 30px;
@@ -191,3 +193,41 @@ header {
   }
 }
 /*design section*/
+/*mobile_section*/
+.mobile_section {
+  margin-top: 400px;
+  @include widthHeight(100%, 400px);
+  background-color: hsl(237, 17%, 21%);
+  border-radius: 0px 50px 0px 50px;
+  position: relative;
+  .background_section {
+    position: relative;
+    overflow: hidden;
+    @include widthHeight(inherit, inherit);
+    .img_one {
+      position: absolute;
+      top: -610px;
+      left: -235px;
+    }
+    .background_text {
+      @include widthHeight(50%, inherit);
+      @include displayFlex(column, center, center);
+      padding-right: 100px;
+      float: right;
+      .header {
+        color: $primary-white;
+        font-size: fontSize(huge);
+        font-weight: fontWeight(bold);
+        margin-bottom: 30px;
+      }
+      .desc {
+        color: $primary-gray;
+      }
+    }
+  }
+  .img_two {
+    position: absolute;
+    top: -80px;
+  }
+}
+/*mobile_section*/
