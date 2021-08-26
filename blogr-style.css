@@ -12,27 +12,38 @@ header {
   height: 500px;
   overflow: hidden;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-bottom-left-radius: 100px;
 }
 
-header img {
+.header_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header_section img {
   position: absolute;
   bottom: -1365px;
   right: -1224px;
   -webkit-transform: scale(1);
           transform: scale(1);
+  z-index: 1;
 }
 
 .header_menu_section {
   width: 80%;
   height: 100px;
-  z-index: 222222;
+  z-index: 2;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,5 +111,64 @@ header img {
   border-radius: 50px;
   cursor: pointer;
   font-weight: 700;
+}
+
+.middle_section {
+  padding-top: 200px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+  position: absolute;
+}
+
+.middle_section_one {
+  font-size: 35px;
+  word-spacing: 10px;
+  color: white;
+  height: 50px;
+}
+
+.middle_section_two {
+  font-size: 15px;
+  color: white;
+  height: 40px;
+}
+
+.middle_section_btn .one {
+  width: 130px;
+  height: 40px;
+  background-color: white;
+  color: #ff8f70;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+.middle_section_btn .two {
+  width: 130px;
+  height: 40px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 50px;
 }
 /*# sourceMappingURL=blogr-style.css.map */

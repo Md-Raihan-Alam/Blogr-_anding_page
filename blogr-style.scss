@@ -6,6 +6,7 @@ $fontSize: (
   "normal": 17px,
   "big": 20px,
   "logoSize": 24px,
+  "huge": 35px,
 );
 $fontWeight: (
   "light": 400,
@@ -39,19 +40,21 @@ header {
   height: 500px;
   overflow: hidden;
   position: relative;
-  display: flex;
-  justify-content: center;
   border-bottom-left-radius: 100px;
 }
-header img {
+.header_section {
+  @include displayFlex(row, center, flex-start);
+}
+.header_section img {
   position: absolute;
   bottom: -1365px;
   right: -1224px;
   transform: scale(1);
+  z-index: 1;
 }
 .header_menu_section {
   @include widthHeight(80%, 100px);
-  z-index: 222222;
+  z-index: 2;
   position: absolute;
   @include displayFlex(row, space-between, center);
   padding: 0px 20px;
@@ -91,6 +94,47 @@ header img {
       border-radius: 50px;
       cursor: pointer;
       font-weight: fontWeight(bold);
+    }
+  }
+}
+.middle_section {
+  padding-top: 200px;
+  @include widthHeight(100%, auto);
+  @include displayFlex(column, center, center);
+  z-index: 3;
+  position: absolute;
+  &_one {
+    font-size: fontSize(huge);
+    word-spacing: 10px;
+    color: $primary-white;
+    height: 50px;
+  }
+  &_two {
+    font-size: fontSize(small);
+    color: $primary-white;
+    height: 40px;
+  }
+  &_btn {
+    .one {
+      @include widthHeight(130px, 40px);
+      background-color: $primary-white;
+      color: $primary-header-color;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-weight: fontWeight(bold);
+      border-radius: 50px;
+      margin-right: 20px;
+    }
+    .two {
+      @include widthHeight(130px, 40px);
+      background-color: transparent;
+      color: $primary-white;
+      border: 1px solid $primary-white;
+      outline: none;
+      cursor: pointer;
+      font-weight: fontWeight(bold);
+      border-radius: 50px;
     }
   }
 }
