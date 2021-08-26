@@ -1,5 +1,6 @@
 $primary-header-color: hsl(13, 100%, 72%);
 $primary-white: hsl(100, 100%, 100%);
+$primary-gray: gray;
 $fontSize: (
   "verySmall": 10px,
   "small": 15px,
@@ -34,6 +35,7 @@ $fontWeight: (
   box-sizing: border-box;
   text-decoration: none;
 }
+/*header section*/
 header {
   background-color: $primary-header-color;
   width: 100%;
@@ -138,3 +140,54 @@ header {
     }
   }
 }
+/*header section*/
+/*design section*/
+.design_section {
+  @include widthHeight(100%, auto);
+  &_header {
+    @include widthHeight(100%, 250px);
+    text-align: center;
+    line-height: 250px;
+    font-size: fontSize(huge);
+    font-weight: fontWeight(bold);
+  }
+  .design_divide {
+    @include displayFlex(row, space-evenly, center);
+    &_one {
+      @include widthHeight(50%, auto);
+      padding: 0px 40px;
+      .text_one {
+        &_header {
+          @include widthHeight(100%, 60px);
+          font-size: fontSize(logoSize);
+        }
+        &_desc {
+          text-align: justify;
+          color: $primary-gray;
+          margin-bottom: 30px;
+        }
+      }
+      .text_two {
+        &_header {
+          @include widthHeight(100%, 60px);
+          font-size: fontSize(logoSize);
+        }
+        &_desc {
+          text-align: justify;
+          color: $primary-gray;
+          margin-bottom: 30px;
+        }
+      }
+    }
+    &_two {
+      @include widthHeight(50%, auto);
+      position: relative;
+      img {
+        @include widthHeight(100%, auto);
+        position: absolute;
+        top: -335px;
+      }
+    }
+  }
+}
+/*design section*/
