@@ -1,6 +1,7 @@
 $primary-header-color: hsl(13, 100%, 72%);
 $primary-white: hsl(100, 100%, 100%);
 $primary-gray: gray;
+$primary-black: hsl(240, 10%, 16%);
 $fontSize: (
   "verySmall": 10px,
   "small": 15px,
@@ -260,3 +261,39 @@ header {
   }
 }
 /*laptop and prons section*/
+/*footer*/
+footer {
+  margin-top: 800px;
+  @include widthHeight(100%, 350px);
+  background-color: $primary-black;
+  @include displayFlex(row, center, center);
+  .footer_section {
+    @include widthHeight(80%, inherit);
+    @include displayFlex(row, space-evenly, flex-start);
+    padding-top: 50px;
+    &_one {
+      color: $primary-white;
+      font-size: fontSize(logoSize);
+      font-weight: fontWeight(bold);
+    }
+    &_two,
+    &_three,
+    &_four {
+      @include displayFlex(column, flex-start, center);
+      @include widthHeight(100%, 80%);
+      * {
+        padding-bottom: 20px;
+      }
+      .name {
+        padding-top: 5px;
+        color: $primary-white;
+        font-size: fontSize(normal);
+        font-weight: fontWeight(light);
+      }
+      .name_link {
+        color: $primary-gray;
+      }
+    }
+  }
+}
+/*footer*/
