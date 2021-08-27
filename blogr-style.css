@@ -313,4 +313,41 @@ header {
 }
 
 /*mobile_section*/
+/*laptop and prons section*/
+.laptop_prons_section {
+  margin-top: 100px;
+  position: relative;
+}
+
+.laptop_prons_section_desc {
+  margin-top: 200px;
+  width: 40%;
+  height: auto;
+  float: right;
+}
+
+.laptop_prons_section_desc .header {
+  font-size: 24px;
+  height: 60px;
+}
+
+.laptop_prons_section_desc .desc {
+  font-size: 15px;
+  height: 100px;
+  width: 70%;
+  height: auto;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+.laptop_prons_section .laptop_img {
+  position: absolute;
+  top: 26px;
+  left: -133px;
+  width: 50%;
+  height: 600px;
+}
+
+/*laptop and prons section*/
 /*# sourceMappingURL=blogr-style.css.map */

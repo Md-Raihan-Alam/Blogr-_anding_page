@@ -231,3 +231,32 @@ header {
   }
 }
 /*mobile_section*/
+/*laptop and prons section*/
+.laptop_prons_section {
+  margin-top: 100px;
+  position: relative;
+  &_desc {
+    margin-top: 200px;
+    @include widthHeight(40%, auto);
+    float: right;
+    .header {
+      font-size: fontSize(logoSize);
+      height: 60px;
+    }
+    .desc {
+      font-size: fontSize(small);
+      height: 100px;
+      @include widthHeight(70%, auto);
+      text-align: justify;
+      margin-bottom: 20px;
+      color: $primary-gray;
+    }
+  }
+  .laptop_img {
+    position: absolute;
+    top: 26px;
+    left: -133px;
+    @include widthHeight(50%, 600px);
+  }
+}
+/*laptop and prons section*/
