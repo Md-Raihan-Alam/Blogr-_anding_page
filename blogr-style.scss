@@ -105,7 +105,7 @@ header {
       &_link_three:hover {
         cursor: pointer;
       }
-      .dropdown_menu_one {
+      .one {
         @include positionPlace(30px, -40px, 130px, 150px);
         .menu_one,
         .menu_two,
@@ -118,7 +118,7 @@ header {
           color: $primary-black;
         }
       }
-      .dropdown_menu_two {
+      .two {
         @include positionPlace(30px, -40px, 170px, 180px);
         .menu_one,
         .menu_two,
@@ -131,7 +131,7 @@ header {
           color: $primary-black;
         }
       }
-      .dropdown_menu_three {
+      .three {
         @include positionPlace(30px, -40px, 130px, 180px);
         .menu_one,
         .menu_two,

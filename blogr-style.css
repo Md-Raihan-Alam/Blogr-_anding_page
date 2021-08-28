@@ -118,7 +118,7 @@ header {
   cursor: pointer;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_one {
+.header_menu_section .menu_one .menu_section .one {
   visibility: hidden;
   position: absolute;
   left: -40px;
@@ -145,19 +145,19 @@ header {
   cursor: pointer;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_one,
-.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_two,
-.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_three {
+.header_menu_section .menu_one .menu_section .one .menu_one,
+.header_menu_section .menu_one .menu_section .one .menu_two,
+.header_menu_section .menu_one .menu_section .one .menu_three {
   font-size: 15px;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_one:hover,
-.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_two:hover,
-.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_three:hover {
+.header_menu_section .menu_one .menu_section .one .menu_one:hover,
+.header_menu_section .menu_one .menu_section .one .menu_two:hover,
+.header_menu_section .menu_one .menu_section .one .menu_three:hover {
   color: #25252d;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_two {
+.header_menu_section .menu_one .menu_section .two {
   visibility: hidden;
   position: absolute;
   left: -40px;
@@ -184,19 +184,19 @@ header {
   cursor: pointer;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_one,
-.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_two,
-.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_three {
+.header_menu_section .menu_one .menu_section .two .menu_one,
+.header_menu_section .menu_one .menu_section .two .menu_two,
+.header_menu_section .menu_one .menu_section .two .menu_three {
   font-size: 15px;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_one:hover,
-.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_two:hover,
-.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_three:hover {
+.header_menu_section .menu_one .menu_section .two .menu_one:hover,
+.header_menu_section .menu_one .menu_section .two .menu_two:hover,
+.header_menu_section .menu_one .menu_section .two .menu_three:hover {
   color: #25252d;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_three {
+.header_menu_section .menu_one .menu_section .three {
   visibility: hidden;
   position: absolute;
   left: -40px;
@@ -223,15 +223,15 @@ header {
   cursor: pointer;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_one,
-.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_two,
-.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_three {
+.header_menu_section .menu_one .menu_section .three .menu_one,
+.header_menu_section .menu_one .menu_section .three .menu_two,
+.header_menu_section .menu_one .menu_section .three .menu_three {
   font-size: 15px;
 }
 
-.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_one:hover,
-.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_two:hover,
-.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_three:hover {
+.header_menu_section .menu_one .menu_section .three .menu_one:hover,
+.header_menu_section .menu_one .menu_section .three .menu_two:hover,
+.header_menu_section .menu_one .menu_section .three .menu_three:hover {
   color: #25252d;
 }
 
