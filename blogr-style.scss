@@ -2,6 +2,8 @@ $primary-header-color: hsl(13, 100%, 72%);
 $primary-white: hsl(100, 100%, 100%);
 $primary-gray: gray;
 $primary-black: hsl(240, 10%, 16%);
+$primary-white-hover: rgba(255, 255, 255, 0.384);
+$primary-btn-color: hsl(353, 100%, 62%);
 $fontSize: (
   "verySmall": 10px,
   "small": 15px,
@@ -29,6 +31,20 @@ $fontWeight: (
   flex-direction: $flexDirection;
   justify-content: $alignments;
   align-items: $alignments2;
+}
+@mixin positionPlace($top, $left, $width, $height) {
+  visibility: hidden;
+  position: absolute;
+  left: $left;
+  top: $top;
+  width: $width;
+  height: $height;
+  padding: 30px;
+  z-index: 4;
+  @include displayFlex(column, space-evenly, flex-start);
+  color: $primary-gray;
+  background-color: $primary-white;
+  cursor: pointer;
 }
 * {
   margin: 0;
@@ -58,7 +74,6 @@ header {
 .header_menu_section {
   @include widthHeight(80%, 100px);
   z-index: 2;
-  position: absolute;
   @include displayFlex(row, space-between, center);
   padding: 0px 20px;
   .menu_one {
@@ -69,8 +84,13 @@ header {
       color: $primary-white;
     }
     .menu_section {
-      &_link {
+      position: relative;
+      @include displayFlex(row, center, center);
+      &_link_one,
+      &_link_two,
+      &_link_three {
         padding-right: 40px;
+        z-index: 3;
         color: $primary-white;
         position: relative;
         i {
@@ -78,6 +98,50 @@ header {
           left: 64%;
           top: 6px;
           font-size: fontSize(verySmall);
+        }
+      }
+      &_link_one:hover,
+      &_link_two:hover,
+      &_link_three:hover {
+        cursor: pointer;
+      }
+      .dropdown_menu_one {
+        @include positionPlace(30px, -40px, 130px, 150px);
+        .menu_one,
+        .menu_two,
+        .menu_three {
+          font-size: fontSize(small);
+        }
+        .menu_one:hover,
+        .menu_two:hover,
+        .menu_three:hover {
+          color: $primary-black;
+        }
+      }
+      .dropdown_menu_two {
+        @include positionPlace(30px, -40px, 170px, 180px);
+        .menu_one,
+        .menu_two,
+        .menu_three {
+          font-size: fontSize(small);
+        }
+        .menu_one:hover,
+        .menu_two:hover,
+        .menu_three:hover {
+          color: $primary-black;
+        }
+      }
+      .dropdown_menu_three {
+        @include positionPlace(30px, -40px, 130px, 180px);
+        .menu_one,
+        .menu_two,
+        .menu_three {
+          font-size: fontSize(small);
+        }
+        .menu_one:hover,
+        .menu_two:hover,
+        .menu_three:hover {
+          color: $primary-black;
         }
       }
     }
@@ -93,15 +157,19 @@ header {
       border: none;
       outline: none;
       background-color: $primary-white;
-      color: hsl(353, 100%, 62%);
+      color: $primary-btn-color;
       border-radius: 50px;
       cursor: pointer;
       font-weight: fontWeight(bold);
     }
+    &_sign:hover {
+      color: $primary-white;
+      background-color: $primary-white-hover;
+    }
   }
 }
 .middle_section {
-  padding-top: 200px;
+  margin-top: 200px;
   @include widthHeight(100%, auto);
   @include displayFlex(column, center, center);
   z-index: 3;
@@ -128,6 +196,10 @@ header {
       font-weight: fontWeight(bold);
       border-radius: 50px;
       margin-right: 20px;
+      &:hover {
+        background-color: $primary-white-hover;
+        color: $primary-white;
+      }
     }
     .two {
       @include widthHeight(130px, 40px);
@@ -138,6 +210,10 @@ header {
       cursor: pointer;
       font-weight: fontWeight(bold);
       border-radius: 50px;
+      &:hover {
+        background-color: $primary-white;
+        color: $primary-btn-color;
+      }
     }
   }
 }
@@ -292,6 +368,9 @@ footer {
       }
       .name_link {
         color: $primary-gray;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

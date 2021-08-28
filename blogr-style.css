@@ -45,7 +45,6 @@ header {
   width: 80%;
   height: 100px;
   z-index: 2;
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,17 +83,156 @@ header {
   color: white;
 }
 
-.header_menu_section .menu_one .menu_section_link {
+.header_menu_section .menu_one .menu_section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_menu_section .menu_one .menu_section_link_one, .header_menu_section .menu_one .menu_section_link_two, .header_menu_section .menu_one .menu_section_link_three {
   padding-right: 40px;
+  z-index: 3;
   color: white;
   position: relative;
 }
 
-.header_menu_section .menu_one .menu_section_link i {
+.header_menu_section .menu_one .menu_section_link_one i, .header_menu_section .menu_one .menu_section_link_two i, .header_menu_section .menu_one .menu_section_link_three i {
   position: absolute;
   left: 64%;
   top: 6px;
   font-size: 10px;
+}
+
+.header_menu_section .menu_one .menu_section_link_one:hover, .header_menu_section .menu_one .menu_section_link_two:hover, .header_menu_section .menu_one .menu_section_link_three:hover {
+  cursor: pointer;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_one {
+  visibility: hidden;
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  width: 130px;
+  height: 150px;
+  padding: 30px;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: gray;
+  background-color: white;
+  cursor: pointer;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_one,
+.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_two,
+.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_three {
+  font-size: 15px;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_one:hover,
+.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_two:hover,
+.header_menu_section .menu_one .menu_section .dropdown_menu_one .menu_three:hover {
+  color: #25252d;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_two {
+  visibility: hidden;
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  width: 170px;
+  height: 180px;
+  padding: 30px;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: gray;
+  background-color: white;
+  cursor: pointer;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_one,
+.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_two,
+.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_three {
+  font-size: 15px;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_one:hover,
+.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_two:hover,
+.header_menu_section .menu_one .menu_section .dropdown_menu_two .menu_three:hover {
+  color: #25252d;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_three {
+  visibility: hidden;
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  width: 130px;
+  height: 180px;
+  padding: 30px;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: gray;
+  background-color: white;
+  cursor: pointer;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_one,
+.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_two,
+.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_three {
+  font-size: 15px;
+}
+
+.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_one:hover,
+.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_two:hover,
+.header_menu_section .menu_one .menu_section .dropdown_menu_three .menu_three:hover {
+  color: #25252d;
 }
 
 .header_menu_section .menu_two_login {
@@ -114,8 +252,13 @@ header {
   font-weight: 700;
 }
 
+.header_menu_section .menu_two_sign:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.384);
+}
+
 .middle_section {
-  padding-top: 200px;
+  margin-top: 200px;
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -161,6 +304,11 @@ header {
   margin-right: 20px;
 }
 
+.middle_section_btn .one:hover {
+  background-color: rgba(255, 255, 255, 0.384);
+  color: white;
+}
+
 .middle_section_btn .two {
   width: 130px;
   height: 40px;
@@ -171,6 +319,11 @@ header {
   cursor: pointer;
   font-weight: 700;
   border-radius: 50px;
+}
+
+.middle_section_btn .two:hover {
+  background-color: white;
+  color: #ff3d54;
 }
 
 /*header section*/
@@ -427,6 +580,10 @@ footer .footer_section_two .name, footer .footer_section_three .name, footer .fo
 
 footer .footer_section_two .name_link, footer .footer_section_three .name_link, footer .footer_section_four .name_link {
   color: gray;
+}
+
+footer .footer_section_two .name_link:hover, footer .footer_section_three .name_link:hover, footer .footer_section_four .name_link:hover {
+  text-decoration: underline;
 }
 
 /*footer*/
