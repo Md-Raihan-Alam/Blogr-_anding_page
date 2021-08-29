@@ -11,6 +11,7 @@ $fontSize: (
   "big": 20px,
   "logoSize": 24px,
   "huge": 35px,
+  "special": 1.5rem,
 );
 $fontWeight: (
   "light": 400,
@@ -70,7 +71,7 @@ body {
 /*header section*/
 header {
   background-color: $primary-header-color;
-  @include widthHeight(100%, 500px);
+  @include widthHeight(100%, 600px);
   @include mobileDesgin {
     @include widthHeight(100%, 700px);
   }
@@ -269,10 +270,10 @@ header {
 .design_section {
   @include widthHeight(100%, auto);
   &_header {
-    @include widthHeight(100%, 250px);
+    @include widthHeight(100%, 200px);
     text-align: center;
-    line-height: 250px;
-    font-size: fontSize(huge);
+    @include displayFlex(row, center, center);
+    font-size: fontSize(special);
     font-weight: fontWeight(bold);
   }
   .design_divide {
@@ -289,12 +290,13 @@ header {
         padding: 10px 30px;
         @include widthHeight(100%, auto);
         text-align: center;
-        margin-top: 330px;
+        margin-top: 180px;
       }
       .text_one {
         &_header {
           @include widthHeight(100%, 60px);
           font-size: fontSize(logoSize);
+          margin-bottom: 10px;
         }
         &_desc {
           @include widthHeight(80%, auto);
@@ -340,6 +342,7 @@ header {
         display: none;
         @include mobileDesgin {
           display: block;
+          @include widthHeight(200%, auto);
         }
         position: absolute;
         top: -50px;
@@ -353,6 +356,9 @@ header {
 /*mobile_section*/
 .mobile_section {
   margin-top: 400px;
+  @include mobileDesgin {
+    margin-top: 130px;
+  }
   @include widthHeight(100%, 400px);
   background-color: hsl(237, 17%, 21%);
   border-radius: 0px 50px 0px 50px;
@@ -361,6 +367,9 @@ header {
     position: relative;
     overflow: hidden;
     @include widthHeight(inherit, inherit);
+    @include mobileDesgin {
+      @include displayFlex(column, center, center);
+    }
     .img_one {
       position: absolute;
       top: -610px;
@@ -385,6 +394,9 @@ header {
   .img_two {
     position: absolute;
     top: -80px;
+    @include mobileDesgin {
+      @include widthHeight(50%, auto);
+    }
   }
 }
 /*mobile_section*/
@@ -414,6 +426,10 @@ header {
     top: 26px;
     left: -133px;
     @include widthHeight(50%, 600px);
+    @include mobileDesgin {
+      @include widthHeight(30%, 600px);
+      top: 10px;
+    }
   }
 }
 /*laptop and prons section*/

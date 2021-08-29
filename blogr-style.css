@@ -16,7 +16,7 @@ body {
 header {
   background-color: #ff8f70;
   width: 100%;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
   position: relative;
   border-bottom-left-radius: 50px;
@@ -423,10 +423,22 @@ header {
 
 .design_section_header {
   width: 100%;
-  height: 250px;
+  height: 200px;
   text-align: center;
-  line-height: 250px;
-  font-size: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -469,7 +481,7 @@ header {
     width: 100%;
     height: auto;
     text-align: center;
-    margin-top: 330px;
+    margin-top: 180px;
   }
 }
 
@@ -477,6 +489,7 @@ header {
   width: 100%;
   height: 60px;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .design_section .design_divide_one .text_one_desc {
@@ -548,6 +561,8 @@ header {
 @media (max-width: 710px) {
   .design_section .design_divide_two .img_editor_mobile {
     display: block;
+    width: 200%;
+    height: auto;
   }
 }
 
@@ -562,11 +577,35 @@ header {
   position: relative;
 }
 
+@media (max-width: 710px) {
+  .mobile_section {
+    margin-top: 130px;
+  }
+}
+
 .mobile_section .background_section {
   position: relative;
   overflow: hidden;
   width: inherit;
   height: inherit;
+}
+
+@media (max-width: 710px) {
+  .mobile_section .background_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .mobile_section .background_section .img_one {
@@ -611,6 +650,13 @@ header {
   top: -80px;
 }
 
+@media (max-width: 710px) {
+  .mobile_section .img_two {
+    width: 50%;
+    height: auto;
+  }
+}
+
 /*mobile_section*/
 /*laptop and prons section*/
 .laptop_prons_section {
@@ -646,6 +692,14 @@ header {
   left: -133px;
   width: 50%;
   height: 600px;
+}
+
+@media (max-width: 710px) {
+  .laptop_prons_section .laptop_img {
+    width: 30%;
+    height: 600px;
+    top: 10px;
+  }
 }
 
 /*laptop and prons section*/
