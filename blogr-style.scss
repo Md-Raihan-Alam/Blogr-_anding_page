@@ -46,17 +46,34 @@ $fontWeight: (
   background-color: $primary-white;
   cursor: pointer;
 }
+/*media content*/
+@mixin mobileDesgin {
+  @media (max-width: 710px) {
+    @content;
+  }
+}
+@mixin mobileDesginTwo {
+  @media (max-width: 280px) {
+    @content;
+  }
+}
+/*media content*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
+body {
+  height: 0px;
+}
 /*header section*/
 header {
   background-color: $primary-header-color;
-  width: 100%;
-  height: 500px;
+  @include widthHeight(100%, 500px);
+  @include mobileDesgin {
+    @include widthHeight(100%, 700px);
+  }
   overflow: hidden;
   position: relative;
   border-bottom-left-radius: 50px;
@@ -69,6 +86,13 @@ header {
   bottom: -1365px;
   right: -1224px;
   transform: scale(1);
+  /*mobile design for background img in header*/
+  @include mobileDesgin {
+    bottom: -1365px;
+    transform: scale(0.6);
+    right: -1600px;
+  }
+  /*mobile design for background img in header*/
   z-index: 1;
 }
 .header_menu_section {
@@ -86,9 +110,12 @@ header {
     .menu_section {
       position: relative;
       @include displayFlex(row, center, center);
-      &_link_one,
-      &_link_two,
-      &_link_three {
+      &_link_one {
+        /*mobile design for nav menus*/
+        @include mobileDesgin {
+          display: none;
+        }
+        /*mobile design for nav menus*/
         padding-right: 40px;
         z-index: 3;
         color: $primary-white;
@@ -100,9 +127,7 @@ header {
           font-size: fontSize(verySmall);
         }
       }
-      &_link_one:hover,
-      &_link_two:hover,
-      &_link_three:hover {
+      &_link_one:hover {
         cursor: pointer;
       }
       .one {
@@ -147,6 +172,11 @@ header {
     }
   }
   .menu_two {
+    /*mobile design for nav menus*/
+    @include mobileDesgin {
+      display: none;
+    }
+    /*mobile design for nav menus*/
     &_login {
       color: $primary-white;
     }
@@ -167,6 +197,13 @@ header {
       background-color: $primary-white-hover;
     }
   }
+  .menu_bar_icon {
+    display: none;
+    cursor: pointer;
+    @include mobileDesgin {
+      display: block;
+    }
+  }
 }
 .middle_section {
   margin-top: 200px;
@@ -178,16 +215,26 @@ header {
     font-size: fontSize(huge);
     word-spacing: 10px;
     color: $primary-white;
-    height: 50px;
+    margin-bottom: 50px;
+    text-align: center;
   }
   &_two {
     font-size: fontSize(small);
     color: $primary-white;
     height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
   }
   &_btn {
+    @include displayFlex(row, center, center);
+    @include mobileDesginTwo {
+      flex-direction: column;
+    }
     .one {
       @include widthHeight(130px, 40px);
+      @include mobileDesginTwo {
+        margin-bottom: 30px;
+      }
       background-color: $primary-white;
       color: $primary-header-color;
       border: none;
@@ -230,9 +277,20 @@ header {
   }
   .design_divide {
     @include displayFlex(row, space-evenly, center);
+    /*mobile design for design section*/
+    @include mobileDesgin {
+      flex-direction: column-reverse;
+    }
+    /*mobile design for design section*/
     &_one {
       @include widthHeight(50%, auto);
       padding-left: 40px;
+      @include mobileDesgin {
+        padding: 10px 30px;
+        @include widthHeight(100%, auto);
+        text-align: center;
+        margin-top: 330px;
+      }
       .text_one {
         &_header {
           @include widthHeight(100%, 60px);
@@ -241,6 +299,10 @@ header {
         &_desc {
           @include widthHeight(80%, auto);
           text-align: justify;
+          @include mobileDesgin {
+            @include widthHeight(100%, auto);
+            text-align: center;
+          }
           color: $primary-gray;
           margin-bottom: 30px;
         }
@@ -253,6 +315,10 @@ header {
         &_desc {
           @include widthHeight(80%, auto);
           text-align: justify;
+          @include mobileDesgin {
+            @include widthHeight(100%, auto);
+            text-align: center;
+          }
           color: $primary-gray;
           margin-bottom: 30px;
         }
@@ -261,10 +327,24 @@ header {
     &_two {
       @include widthHeight(50%, auto);
       position: relative;
-      img {
+      .img_editor_desktop {
+        display: block;
+        @include mobileDesgin {
+          display: none;
+        }
         @include widthHeight(100%, auto);
         position: absolute;
         top: -335px;
+      }
+      .img_editor_mobile {
+        display: none;
+        @include mobileDesgin {
+          display: block;
+        }
+        position: absolute;
+        top: -50px;
+        width: 400px;
+        left: -60px;
       }
     }
   }
