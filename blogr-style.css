@@ -12,6 +12,10 @@ body {
   height: 0px;
 }
 
+html {
+  height: 0px;
+}
+
 /*header section*/
 header {
   background-color: #ff8f70;
@@ -481,7 +485,7 @@ header {
     width: 100%;
     height: auto;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 80%;
   }
 }
 
@@ -489,7 +493,7 @@ header {
   width: 100%;
   height: 60px;
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .design_section .design_divide_one .text_one_desc {
@@ -555,7 +559,7 @@ header {
   position: absolute;
   top: -50px;
   width: 400px;
-  left: -60px;
+  left: -50%;
 }
 
 @media (max-width: 710px) {
@@ -580,6 +584,13 @@ header {
 @media (max-width: 710px) {
   .mobile_section {
     margin-top: 130px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 710px) {
+  .mobile_section {
+    border-radius: 0px 80px 0px 80px;
   }
 }
 
@@ -609,9 +620,19 @@ header {
 }
 
 .mobile_section .background_section .img_one {
+  overflow: hidden;
   position: absolute;
   top: -610px;
   left: -235px;
+}
+
+@media (max-width: 710px) {
+  .mobile_section .background_section .img_one {
+    left: -417px;
+    top: -470px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
 }
 
 .mobile_section .background_section .background_text {
@@ -631,7 +652,24 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 100px;
+  padding-bottom: 100px;
+  z-index: 1;
   float: right;
+}
+
+@media (max-width: 710px) {
+  .mobile_section .background_section .background_text {
+    float: none;
+    padding-right: 0px;
+    width: 100%;
+    height: 600px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 .mobile_section .background_section .background_text .header {
@@ -645,6 +683,13 @@ header {
   color: gray;
 }
 
+@media (max-width: 710px) {
+  .mobile_section .background_section .background_text .header,
+  .mobile_section .background_section .background_text .desc {
+    text-align: center;
+  }
+}
+
 .mobile_section .img_two {
   position: absolute;
   top: -80px;
@@ -652,8 +697,9 @@ header {
 
 @media (max-width: 710px) {
   .mobile_section .img_two {
-    width: 50%;
+    width: 100%;
     height: auto;
+    top: -138px;
   }
 }
 

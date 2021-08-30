@@ -68,6 +68,9 @@ $fontWeight: (
 body {
   height: 0px;
 }
+html {
+  height: 0px;
+}
 /*header section*/
 header {
   background-color: $primary-header-color;
@@ -290,13 +293,13 @@ header {
         padding: 10px 30px;
         @include widthHeight(100%, auto);
         text-align: center;
-        margin-top: 180px;
+        margin-top: 80%;
       }
       .text_one {
         &_header {
           @include widthHeight(100%, 60px);
           font-size: fontSize(logoSize);
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
         &_desc {
           @include widthHeight(80%, auto);
@@ -347,7 +350,7 @@ header {
         position: absolute;
         top: -50px;
         width: 400px;
-        left: -60px;
+        left: -50%;
       }
     }
   }
@@ -356,12 +359,16 @@ header {
 /*mobile_section*/
 .mobile_section {
   margin-top: 400px;
+  @include widthHeight(100%, 400px);
   @include mobileDesgin {
     margin-top: 130px;
+    height: 600px;
   }
-  @include widthHeight(100%, 400px);
   background-color: hsl(237, 17%, 21%);
   border-radius: 0px 50px 0px 50px;
+  @include mobileDesgin {
+    border-radius: 0px 80px 0px 80px;
+  }
   position: relative;
   .background_section {
     position: relative;
@@ -371,15 +378,30 @@ header {
       @include displayFlex(column, center, center);
     }
     .img_one {
+      overflow: hidden;
       position: absolute;
       top: -610px;
       left: -235px;
+      @include mobileDesgin {
+        left: -417px;
+        top: -470px;
+        transform: scale(0.5);
+      }
     }
     .background_text {
       @include widthHeight(50%, inherit);
       @include displayFlex(column, center, center);
       padding-right: 100px;
+      padding-bottom: 100px;
+      z-index: 1;
       float: right;
+      @include mobileDesgin {
+        float: none;
+        padding-right: 0px;
+        @include widthHeight(100%, 600px);
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
       .header {
         color: $primary-white;
         font-size: fontSize(huge);
@@ -389,13 +411,20 @@ header {
       .desc {
         color: $primary-gray;
       }
+      @include mobileDesgin {
+        .header,
+        .desc {
+          text-align: center;
+        }
+      }
     }
   }
   .img_two {
     position: absolute;
     top: -80px;
     @include mobileDesgin {
-      @include widthHeight(50%, auto);
+      @include widthHeight(100%, auto);
+      top: -138px;
     }
   }
 }
