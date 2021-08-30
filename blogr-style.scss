@@ -53,6 +53,11 @@ $fontWeight: (
     @content;
   }
 }
+@mixin mobileDesignSpe {
+  @media (max-width: 1050px) {
+    @content;
+  }
+}
 @mixin mobileDesginTwo {
   @media (max-width: 280px) {
     @content;
@@ -360,13 +365,13 @@ header {
 .mobile_section {
   margin-top: 400px;
   @include widthHeight(100%, 400px);
-  @include mobileDesgin {
+  @include mobileDesignSpe {
     margin-top: 130px;
     height: 600px;
   }
   background-color: hsl(237, 17%, 21%);
   border-radius: 0px 50px 0px 50px;
-  @include mobileDesgin {
+  @include mobileDesignSpe {
     border-radius: 0px 80px 0px 80px;
   }
   position: relative;
@@ -374,7 +379,7 @@ header {
     position: relative;
     overflow: hidden;
     @include widthHeight(inherit, inherit);
-    @include mobileDesgin {
+    @include mobileDesignSpe {
       @include displayFlex(column, center, center);
     }
     .img_one {
@@ -395,7 +400,7 @@ header {
       padding-bottom: 100px;
       z-index: 1;
       float: right;
-      @include mobileDesgin {
+      @include mobileDesignSpe {
         float: none;
         padding-right: 0px;
         @include widthHeight(100%, 600px);
@@ -403,6 +408,7 @@ header {
         align-items: flex-end;
       }
       .header {
+        @include widthHeight(100%, auto);
         color: $primary-white;
         font-size: fontSize(huge);
         font-weight: fontWeight(bold);
@@ -411,7 +417,7 @@ header {
       .desc {
         color: $primary-gray;
       }
-      @include mobileDesgin {
+      @include mobileDesignSpe {
         .header,
         .desc {
           text-align: center;
@@ -420,10 +426,11 @@ header {
     }
   }
   .img_two {
+    @include widthHeight(40%, auto);
     position: absolute;
     top: -80px;
     @include mobileDesgin {
-      @include widthHeight(100%, auto);
+      @include widthHeight(80%, auto);
       top: -138px;
     }
   }
@@ -451,13 +458,31 @@ header {
     }
   }
   .laptop_img {
+    display: block;
+    @include mobileDesgin {
+      display: none;
+    }
     position: absolute;
     top: 26px;
     left: -133px;
     @include widthHeight(50%, 600px);
-    @include mobileDesgin {
-      @include widthHeight(30%, 600px);
-      top: 10px;
+  }
+  .laptop_img_mobile {
+    display: none;
+  }
+  @include mobileDesgin {
+    .laptop_img_mobile {
+      display: block;
+      max-width: 100%;
+    }
+    .laptop_prons_section_desc {
+      margin-top: 50px;
+      @include widthHeight(100%, auto);
+      text-align: center;
+      .desc {
+        text-align: center;
+        @include widthHeight(100%, auto);
+      }
     }
   }
 }
@@ -473,6 +498,7 @@ footer {
     @include displayFlex(row, space-evenly, flex-start);
     padding-top: 50px;
     &_one {
+      @include widthHeight(100%, auto);
       color: $primary-white;
       font-size: fontSize(logoSize);
       font-weight: fontWeight(bold);
@@ -496,6 +522,18 @@ footer {
         &:hover {
           text-decoration: underline;
         }
+      }
+    }
+  }
+  @include mobileDesgin {
+    margin-top: 75%;
+    height: 1000px;
+    .footer_section {
+      height: 1000px;
+      flex-direction: column;
+      &_one {
+        text-align: center;
+        margin-bottom: 40px;
       }
     }
   }
