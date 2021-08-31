@@ -16,6 +16,125 @@ html {
   height: 0px;
 }
 
+/*menu for mobile*/
+main {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu_mobile {
+  display: none;
+  width: 60%;
+  height: 400px;
+  background-color: white;
+  z-index: 33333333333;
+}
+
+@media (max-width: 710px) {
+  main .menu_mobile {
+    display: block;
+  }
+}
+
+main .menu_mobile .menu_mobile_one,
+main .menu_mobile .menu_mobile_two,
+main .menu_mobile .menu_mobile_three {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu_mobile .menu_mobile_one_text,
+main .menu_mobile .menu_mobile_two_text,
+main .menu_mobile .menu_mobile_three_text {
+  cursor: pointer;
+  padding: 10px 0px;
+  position: relative;
+}
+
+main .menu_mobile .menu_mobile_one_text i,
+main .menu_mobile .menu_mobile_two_text i,
+main .menu_mobile .menu_mobile_three_text i {
+  font-size: 10px;
+  position: absolute;
+  cursor: pointer;
+  color: #ff3d54;
+}
+
+main .menu_mobile .menu_mobile_one_text #mb_icon_one,
+main .menu_mobile .menu_mobile_two_text #mb_icon_one,
+main .menu_mobile .menu_mobile_three_text #mb_icon_one {
+  right: -26%;
+  top: 45%;
+}
+
+main .menu_mobile .menu_mobile_one_text #mb_icon_two,
+main .menu_mobile .menu_mobile_two_text #mb_icon_two,
+main .menu_mobile .menu_mobile_three_text #mb_icon_two {
+  right: -20%;
+  top: 43%;
+}
+
+main .menu_mobile .menu_mobile_one_text #mb_icon_three,
+main .menu_mobile .menu_mobile_two_text #mb_icon_three,
+main .menu_mobile .menu_mobile_three_text #mb_icon_three {
+  right: -30%;
+  top: 43%;
+}
+
+main .menu_mobile .menu_mobile_one .menu_mobile_one_options,
+main .menu_mobile .menu_mobile_one .menu_mobile_two_options,
+main .menu_mobile .menu_mobile_one .menu_mobile_three_options,
+main .menu_mobile .menu_mobile_two .menu_mobile_one_options,
+main .menu_mobile .menu_mobile_two .menu_mobile_two_options,
+main .menu_mobile .menu_mobile_two .menu_mobile_three_options,
+main .menu_mobile .menu_mobile_three .menu_mobile_one_options,
+main .menu_mobile .menu_mobile_three .menu_mobile_two_options,
+main .menu_mobile .menu_mobile_three .menu_mobile_three_options {
+  width: 80%;
+  height: auto;
+  background-color: gray;
+}
+
+main .menu_mobile .menu_mobile_one .menu_mobile_one_options .option,
+main .menu_mobile .menu_mobile_one .menu_mobile_two_options .option,
+main .menu_mobile .menu_mobile_one .menu_mobile_three_options .option,
+main .menu_mobile .menu_mobile_two .menu_mobile_one_options .option,
+main .menu_mobile .menu_mobile_two .menu_mobile_two_options .option,
+main .menu_mobile .menu_mobile_two .menu_mobile_three_options .option,
+main .menu_mobile .menu_mobile_three .menu_mobile_one_options .option,
+main .menu_mobile .menu_mobile_three .menu_mobile_two_options .option,
+main .menu_mobile .menu_mobile_three .menu_mobile_three_options .option {
+  padding: 5px 0px;
+  cursor: pointer;
+}
+
+/*menu for mobile*/
 /*header section*/
 header {
   background-color: #ff8f70;
