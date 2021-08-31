@@ -76,6 +76,62 @@ body {
 html {
   height: 0px;
 }
+/*menu for mobile*/
+main {
+  position: absolute;
+  @include widthHeight(100%, 600px);
+  @include displayFlex(row, center, center);
+  .menu_mobile {
+    display: none;
+    @include mobileDesgin {
+      display: block;
+    }
+    @include widthHeight(60%, 400px);
+    background-color: $primary-white;
+    z-index: 33333333333;
+    .menu_mobile_one,
+    .menu_mobile_two,
+    .menu_mobile_three {
+      text-align: center;
+      @include displayFlex(column, center, center);
+      &_text {
+        cursor: pointer;
+        padding: 10px 0px;
+        position: relative;
+        i {
+          font-size: fontSize(verySmall);
+          position: absolute;
+          cursor: pointer;
+          color: $primary-btn-color;
+        }
+        #mb_icon_one {
+          right: -26%;
+          top: 45%;
+        }
+        #mb_icon_two {
+          right: -20%;
+          top: 43%;
+        }
+        #mb_icon_three {
+          right: -30%;
+          top: 43%;
+        }
+      }
+      .menu_mobile_one_options,
+      .menu_mobile_two_options,
+      .menu_mobile_three_options {
+        @include widthHeight(80%, auto);
+        background-color: $primary-gray;
+        // display: none;
+        .option {
+          padding: 5px 0px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+/*menu for mobile*/
 /*header section*/
 header {
   background-color: $primary-header-color;
