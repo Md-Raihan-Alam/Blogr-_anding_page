@@ -44,12 +44,6 @@ main .menu_mobile {
   z-index: 33333333333;
 }
 
-@media (max-width: 710px) {
-  main .menu_mobile {
-    display: block;
-  }
-}
-
 main .menu_mobile .menu_mobile_one,
 main .menu_mobile .menu_mobile_two,
 main .menu_mobile .menu_mobile_three {
