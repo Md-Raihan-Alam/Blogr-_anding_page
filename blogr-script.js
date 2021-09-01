@@ -35,3 +35,27 @@ menuIcon.addEventListener('click',()=>{
     }
 });
 //menu icon and work
+
+//menu list options
+const optionOne=document.querySelector('.menu_mobile_one_text');
+let optionOneResultStatus=true;
+const optionTwo =document.querySelector('.menu_mobile_two_text');
+let optionTwoResultStatus=true;
+const optionThree =document.querySelector('.menu_mobile_three_text');
+let optionThreeResultStatus=true;
+const optionOneResult=document.querySelector('.menu_mobile_one_options');
+const optionTwoResult=document.querySelector('.menu_mobile_two_options');
+const optionThreeResult=document.querySelector('.menu_mobile_three_options');
+optionOne.addEventListener('click',()=>{
+    optionOneResultStatus ? optionOneResult.style.display="block":optionOneResult.style.display="none";
+    optionOneResultStatus ? optionOneResultStatus=false:optionOneResultStatus=true;
+});
+optionTwo.addEventListener('click',()=>{
+    optionTwoResultStatus ? optionTwoResult.style.display="block":optionTwoResult.style.display="none";
+    optionTwoResultStatus ? optionTwoResultStatus=false:optionTwoResultStatus=true;
+});
+optionThree.addEventListener('click',()=>{
+    optionThreeResultStatus ? optionThreeResult.style.display="block":optionThreeResult.style.display="none";
+    optionThreeResultStatus ? optionThreeResultStatus=false:optionThreeResultStatus=true;
+});
+//menu list options
