@@ -17,18 +17,21 @@ btn.forEach((e)=>{
 });
 //nab bar
 
-//menu icon
+//menu icon and work
 let changeIcon=true;
-const menuIconDom=document.querySelector('.menu_bar_icon');
+const menuDom=document.querySelector('.menu_mobile');
 const menuIcon=document.querySelector('.menu_bar_icon i');
 menuIcon.addEventListener('click',()=>{
     if(changeIcon){
         menuIcon.classList.remove('fa-bars');
+        menuDom.style.display="block";
         menuIcon.classList.add('fa-times');
         changeIcon=false;
     }else{
        menuIcon.classList.remove('fa-times');
+       menuDom.style.display="none";
         menuIcon.classList.add('fa-bars');
         changeIcon=true;
     }
 });
+//menu icon and work
