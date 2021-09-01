@@ -119,7 +119,7 @@ main {
       .menu_mobile_three_options {
         @include widthHeight(80%, auto);
         background-color: $primary-gray;
-        // display: none;
+        display: none;
         .option {
           padding: 5px 0px;
           cursor: pointer;

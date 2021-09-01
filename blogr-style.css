@@ -113,6 +113,7 @@ main .menu_mobile .menu_mobile_three .menu_mobile_three_options {
   width: 80%;
   height: auto;
   background-color: gray;
+  display: none;
 }
 
 main .menu_mobile .menu_mobile_one .menu_mobile_one_options .option,
