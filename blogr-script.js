@@ -24,12 +24,12 @@ const menuIcon=document.querySelector('.menu_bar_icon i');
 menuIcon.addEventListener('click',()=>{
     if(changeIcon){
         menuIcon.classList.remove('fa-bars');
-        menuDom.style.display="block";
+        menuDom.style.visibility="visible";
         menuIcon.classList.add('fa-times');
         changeIcon=false;
     }else{
        menuIcon.classList.remove('fa-times');
-       menuDom.style.display="none";
+       menuDom.style.visibility="hidden";
         menuIcon.classList.add('fa-bars');
         changeIcon=true;
     }
