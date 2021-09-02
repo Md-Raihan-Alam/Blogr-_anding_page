@@ -857,7 +857,7 @@ header {
 
 @media (max-width: 710px) {
   .mobile_section .img_two {
-    width: 80%;
+    width: 300px;
     height: auto;
     top: -138px;
   }
