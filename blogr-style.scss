@@ -509,6 +509,10 @@ header {
       @include widthHeight(300px, auto);
       top: -138px;
     }
+    @include mobileDesginTwo {
+      @include widthHeight(200px, auto);
+      top: -138px;
+    }
   }
 }
 /*mobile_section*/

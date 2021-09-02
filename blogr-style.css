@@ -863,6 +863,14 @@ header {
   }
 }
 
+@media (max-width: 280px) {
+  .mobile_section .img_two {
+    width: 200px;
+    height: auto;
+    top: -138px;
+  }
+}
+
 /*mobile_section*/
 /*laptop and prons section*/
 .laptop_prons_section {
